@@ -1,0 +1,16 @@
+version: "3"
+services:
+  jenkins:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    # environment:
+      # - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
+    container_name: jenkins
+    restart: unless-stopped
+volumes:
+  jenkins_home:

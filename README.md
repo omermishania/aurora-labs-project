@@ -1,1 +1,2 @@
-# aurora-labs-project
+# Aurora Labs Project
+
